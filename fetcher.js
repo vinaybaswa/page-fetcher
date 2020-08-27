@@ -1,9 +1,11 @@
 const request = require('request');
 const fs = require('fs');
-const file = './index.html'
+const url = process.argv[2];
+const file = process.argv[3];
 
 
-request('http://www.example.com', (error, response, body) => {
+
+request(url, (error, response, body) => {
   console.log('error:', error);
   console.log('statusCode:', response && response.statusCode);
 
